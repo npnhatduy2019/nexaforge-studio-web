@@ -46,6 +46,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}>
+      <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+      </head>
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans">
         <Navbar />
         <main className="flex-1">{children}</main>
