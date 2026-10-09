@@ -11,6 +11,7 @@ import {
   LockIcon,
   ServerIcon,
   WorkflowIcon,
+  ExternalLinkIcon,
 } from "@/components/icons";
 
 export const metadata = {
@@ -44,19 +45,95 @@ export default function AssetFlowPage() {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="https://oracleapex.com/ords/r/sgwebtools/sgc-ams/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-lg shadow-sm hover:shadow transition-colors group"
+              >
+                <span>Launch Live Interactive Demo</span>
+                <ExternalLinkIcon className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-slate-900 hover:bg-teal-700 rounded-lg shadow-sm hover:shadow transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors"
               >
-                <span>Request AssetFlow Demo</span>
+                <span>Request Custom Deployment</span>
                 <ArrowRightIcon className="w-4 h-4" />
               </Link>
-              <Link
-                href="/technology#oracle-apex"
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors"
-              >
-                <span>Architecture Specs</span>
-              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LIVE INTERACTIVE DEMO SANDBOX BANNER */}
+      <section className="bg-slate-900 text-white py-10 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800 to-teal-950 border border-teal-500/30 p-6 sm:p-8 shadow-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 space-y-3">
+                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-semibold border border-teal-500/40">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" />
+                  <span>Live Production Sandbox Available</span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                  Experience AssetFlow Live on Oracle APEX
+                </h2>
+                <p className="text-sm text-slate-300 leading-relaxed">
+                  We have prepared a live cloud sandbox on Oracle APEX. Explore the actual relational asset register, depreciation schedules, audit reconciliations, and role-based permissions without waiting for a scheduled sales call.
+                </p>
+                <div className="flex flex-wrap gap-4 text-xs text-slate-400 pt-1">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircleIcon className="w-4 h-4 text-teal-400" />
+                    <span>Real-time ACID Transactions</span>
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircleIcon className="w-4 h-4 text-teal-400" />
+                    <span>Sub-100ms Query Performance</span>
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircleIcon className="w-4 h-4 text-teal-400" />
+                    <span>Sample Data Preloaded</span>
+                  </span>
+                </div>
+              </div>
+
+              {/* Sandbox Credentials Card */}
+              <div className="lg:col-span-5 bg-slate-950/80 rounded-xl border border-teal-500/40 p-5 space-y-4">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                  <span className="text-xs font-mono uppercase tracking-wider text-teal-400 font-bold">
+                    Sandbox Credentials
+                  </span>
+                  <span className="text-[11px] px-2 py-0.5 rounded bg-teal-950 text-teal-300 border border-teal-800">
+                    Read & Operate
+                  </span>
+                </div>
+
+                <div className="space-y-2.5 text-xs font-mono">
+                  <div className="flex items-center justify-between p-2 rounded bg-slate-900 border border-slate-800">
+                    <span className="text-slate-400">Username:</span>
+                    <span className="text-teal-300 font-bold tracking-wide">userdev</span>
+                  </div>
+                  <div className="flex items-center justify-between p-2 rounded bg-slate-900 border border-slate-800">
+                    <span className="text-slate-400">Password:</span>
+                    <span className="text-teal-300 font-bold tracking-wide">Admin@123</span>
+                  </div>
+                </div>
+
+                <a
+                  href="https://oracleapex.com/ords/r/sgwebtools/sgc-ams/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs tracking-wider uppercase transition-colors shadow-sm"
+                >
+                  <span>Open Live APEX Sandbox</span>
+                  <ExternalLinkIcon className="w-4 h-4" />
+                </a>
+
+                <p className="text-[10px] text-slate-400 text-center">
+                  Hosted on Oracle Cloud Infrastructure • Isolated Sandbox Workspace
+                </p>
+              </div>
             </div>
           </div>
         </div>

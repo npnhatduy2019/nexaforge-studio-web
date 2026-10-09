@@ -15,6 +15,7 @@ import {
   LockIcon,
   BarChart3Icon,
   ServerIcon,
+  ExternalLinkIcon,
 } from "@/components/icons";
 
 export default function HomePage() {
@@ -217,15 +218,27 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-xs font-mono text-slate-500">Stack: Oracle APEX + PL/SQL + REST</span>
-                <Link
-                  href="/products/assetflow"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 hover:text-teal-800 group"
-                >
-                  <span>Explore Features</span>
-                  <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                </Link>
+              <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+                <span className="text-xs font-mono text-slate-500">Stack: Oracle APEX + PL/SQL</span>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://oracleapex.com/ords/r/sgwebtools/sgc-ams/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-teal-700 hover:text-teal-800 bg-teal-50 px-2.5 py-1.5 rounded border border-teal-200 transition-colors"
+                    title="User: userdev | Pass: Admin@123"
+                  >
+                    <span>Try Live Demo</span>
+                    <ExternalLinkIcon className="w-3.5 h-3.5" />
+                  </a>
+                  <Link
+                    href="/products/assetflow"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-800 hover:text-teal-700 group"
+                  >
+                    <span>Details</span>
+                    <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
